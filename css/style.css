@@ -1,0 +1,20 @@
+/* 
+
+h1 {
+    text-align: center
+}
+
+nav {
+    text-align: center
+}
+ */
+
+.holes {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 50px solid black;
+    height: 50px;
+    width: 50px;
+}
+
