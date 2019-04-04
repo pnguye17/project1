@@ -6,15 +6,63 @@ h1 {
 
 nav {
     text-align: center
-}
+/* }
  */
 
+
 .holes {
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-    border: 50px solid black;
+    border-radius: 75%;
+    background-color:#000;
+    /* float: left; */
+    /* -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px; */
+    /* border: 50px solid black; */
     height: 50px;
-    width: 50px;
+    width: 90px;
+} 
+
+ .row {
+     width: 303px;
+     display: flex;
+     flex-direction: row;
+ }
+
+.gopher {
+    position: relative;
+    animation-name: pop;
+    animation-duration: 5s;
+    animation-iteration-count: infinite
+}
+.gopher1 {
+    position: relative;
+    animation-name: refresh;
+    animation-duration: .5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite
 }
 
+.gopher2 {
+    position: relative;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite
+}
+
+@keyframes pop {
+    0% {top: 0px}
+    100% {top: -90px}
+}
+
+@keyframes refresh {
+    0% {top: 0px}
+    100% {top: -90px}
+}
+
+@keyframes slide {
+    0% {top: 0px}
+    100% {top: -90px}
+}
+ /* .container {
+     background-color: black
+ } */
