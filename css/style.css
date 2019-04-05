@@ -11,13 +11,13 @@ nav {
 
 
 .holes {
-    border-radius: 75%;
-    background-color:#000;
+    border-radius: 100%;
+    background-color: rgb(121, 42, 7);
     /* float: left; */
     /* -moz-border-radius: 200px 200px 200px 200px;
     -webkit-border-radius: 200px 200px 200px 200px; */
     /* border: 50px solid black; */
-    height: 50px;
+    height: 17px;
     width: 90px;
 } 
 
@@ -30,7 +30,7 @@ nav {
 .gopher {
     position: relative;
     animation-name: pop;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite
 }
 .gopher1 {
@@ -51,17 +51,17 @@ nav {
 
 @keyframes pop {
     0% {top: 0px}
-    100% {top: -90px}
+    100% {top: -56px}
 }
 
 @keyframes refresh {
     0% {top: 0px}
-    100% {top: -90px}
+    100% {top: -56px}
 }
 
 @keyframes slide {
     0% {top: 0px}
-    100% {top: -90px}
+    100% {top: -58px}
 }
  /* .container {
      background-color: black
