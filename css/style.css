@@ -1,68 +1,35 @@
-/* 
-
 h1 {
     text-align: center
 }
 
-nav {
-    text-align: center
-/* }
- */
+body {
+    background-color: skyblue
+}
 
+.wrapper {
+    display: block;
+    margin: 250px
+}
 
-.holes {
-    border-radius: 100%;
-    background-color: rgb(121, 42, 7);
-    /* float: left; */
-    /* -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px; */
-    /* border: 50px solid black; */
-    height: 17px;
+img {
     width: 90px;
-} 
-
- .row {
-     width: 303px;
-     display: flex;
-     flex-direction: row;
- }
-
-.gopher {
-    position: relative;
-    animation-name: pop;
-    animation-duration: 10s;
-    animation-iteration-count: infinite
-}
-.gopher1 {
-    position: relative;
-    animation-name: refresh;
-    animation-duration: .5s;
-    animation-delay: 2s;
+    animation-name: jump;
+    animation-delay: 1s;
+    animation-duration: 2s;
     animation-iteration-count: infinite
 }
 
-.gopher2 {
-    position: relative;
-    animation-name: slide;
-    animation-duration: 1s;
-    animation-delay: 4s;
-    animation-iteration-count: infinite
+@keyframes jump {
+    0% { 
+        transform: translateY(0)
+
+    }
+    100% { 
+        transform: translateY(-100px)
+    }
 }
 
-@keyframes pop {
-    0% {top: 0px}
-    100% {top: -56px}
+.shield {
+    background-color: red
 }
 
-@keyframes refresh {
-    0% {top: 0px}
-    100% {top: -56px}
-}
-
-@keyframes slide {
-    0% {top: 0px}
-    100% {top: -58px}
-}
- /* .container {
-     background-color: black
- } */
