@@ -1,35 +1,65 @@
-h1 {
-    text-align: center
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  
+  body {
+    background: aqua;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 200%;
+    margin: 0.5rem 0;
+  }
 
-body {
-    background-color: skyblue
-}
-
-.wrapper {
+  .score {
+    text-align: center;   
+  }
+  
+  
+  .game {
+    max-width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hole:after {
     display: block;
-    margin: 250px
-}
-
-img {
-    width: 90px;
-    animation-name: jump;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-iteration-count: infinite
-}
-
-@keyframes jump {
-    0% { 
-        transform: translateY(0)
-
-    }
-    100% { 
-        transform: translateY(-100px)
-    }
-}
-
-.shield {
-    background-color: red
-}
-
+    background: url("../photos_project1/download\ \(1\).svg") bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+  }
+  
+  .mole {
+    background: url("../photos_project1/download.svg") bottom center no-repeat;
+    background-size: 60%;
+    /* position: absolute; */
+    top: 100%;
+    width: 200px;
+    height: 100%;
+    transition: all 0.5s;
+  }
+  
+  .hole.up .mole {
+    top: 0;
+  }
