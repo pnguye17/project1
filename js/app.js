@@ -38,13 +38,13 @@ function pop() {
   hole.classList.add("up"); //<=== to animate the $moles
   setTimeout(() => {
     hole.classList.remove("up");
-    if (!timeUp) pop(); //<=== ends the loop
+    if (!timeUp) pop(); //<=== if the game is still running invoke pop again
   }, time); //<=== 
 }
 
 function hit(e) {
   score++;
-  this.parentNode.classList.remove("up");
+  this.parentNode.classList.remove("up"); //<=== change the parent node in a node object
   $scoreboard.textContent = score;
 }
 
