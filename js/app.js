@@ -39,10 +39,10 @@ function pop() {
   setTimeout(() => {
     hole.classList.remove("up");
     if (!timeUp) pop(); //<=== if the game is still running invoke pop again
-  }, time); //<=== 
+  }, time); //
 }
 
-function hit(e) {
+function hit() {
   score++;
   this.parentNode.classList.remove("up"); //<=== change the parent node in a node object
   $scoreboard.textContent = score;
