@@ -1,54 +1,57 @@
-const $holes = $('.hole');
-const $scoreBoard = $('#score');
-const $moles = $('.mole');
-const $bonkSound = $('audio');
+// global variables
+
+const holes = document.querySelectorAll(".hole");
+const scoreBoard = document.querySelector(".score");
+const moles = document.querySelectorAll(".mole");
 
 
+let previousHole;
+let timeUp = false;
 let score = 0;
-let lastHole;
 
-$(".game").on("click", (event) => {
-    console.log(event.target)
-    if ($(event.target).hasClass("mole")) {
-        score += 1
-        $scoreBoard.text(score)
-    }
-   
-})
+// eventlistener
+moles.forEach(mole => mole.addEventListener("click", hit)); // <=== adding listeners to each mole div
+
+// functions
+
 
 function randomTime(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
+  return Math.round(Math.random() * (max - min) + min);
+  
 }
 
-function randomHole($holes) {
-  const index = Math.floor(Math.random() * $holes.length);
-  const hole = $holes[index];
-
-  if (hole === lastHole) {
-    return randomHole($holes);
+function randomHole(holes) {
+  const i = Math.floor(Math.random() * holes.length);
+  const hole = holes[i];
+  if (hole === previousHole) { //<= if the holes are the same run the function again
+    return randomHole(holes);
   }
   lastHole = hole;
   return hole;
 }
 
+// functions to make moles appear
 function pop() {
-  const time = randomTime(300, 1000);
-  const hole = randomHole($holes);
-    console.log(time,hole)
-   hole.addClass("up")
+  const time = randomTime(200, 2000);
+  const hole = randomHole(holes);
+  hole.classList.add("up");
+  setTimeout(() => {
+    hole.classList.remove("up");
+    if (!timeUp) pop();
+  }, time);
+}
 
-//   setTimeout(() => {
-//     hole.removeClass('up');
-//     $scoreBoard.removeClass('add');
-//     if (!timeUp) peep();
-//   }, time);
+function hit(e) {
+  score++;
+  this.parentNode.classList.remove("up");
+  scoreBoard.textContent = score;
 }
 
 
-// function start() {
-//   score = 0;
-//   scoreBoard.textContent = score;
-//   timeUp = false;
-//   scoreBoard.removeClass('add');
-//   startScreen.addClass('hide');
-// }
+function startGame() {
+  scoreBoard.textContent = 0;
+  timeUp = false;
+  score = 0;
+  pop();
+  setTimeout(() => (timeUp = true), 15000);
+}

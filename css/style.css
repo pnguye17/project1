@@ -1,74 +1,76 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 22px;
-    font-weight: 300;
-  }
 
-  .play-menu {
-     display: block;
-     text-align: -webkit-center;
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: aqua;
+}
 
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
+body {
+  padding: 0;
+  margin:0;
+  font-family: 'Gloria Hallelujah', cursive;
+}
 
-  body {
-    background: aqua;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 200%;
-    margin: 0.5rem 0;
-  }
+h1 {
+  text-align: center;
+  font-size: 30px;
+  line-height:1;
+  margin-bottom: 0;
+}
 
-  .score {
-    text-align: center; 
-    align-content: center  
-  }
-  
-  
-  .game {
-    max-width: 600px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-  
-  .hole {
-    flex: 1 0 33.33%;
-    overflow: hidden;
-    position: relative;
-    height: 270px;
-  }
-  
-  .hole:after {
-    display: block;
-    background: url("../photos_project1/download\ \(1\).svg") bottom center no-repeat;
-    background-size: contain;
-    content: '';
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    z-index: 2;
-    bottom: -30px;
-  }
-  
-  .mole {
-    background: url("../photos_project1/download.svg") bottom center no-repeat;
-    background-size: 50%;
-    /* position: absolute; */
-    top: 100%;
-    width: 200px;
-    height: 100%;
-    transition: all 0.5s;
-  }
+#btn {
+  text-align: center;
+  padding-top: 25px;
+}
 
-  .hole.up .mole {
-    top: 0;
-  }
+.score {
+  background:rgba(255,255,255,0.2);
+  padding:0 3rem;
+  line-height:1;
+  border-radius:1rem;
+}
+
+.game {
+  width:600px;
+  height: 525px;
+  display:flex;
+  flex-wrap:wrap;
+  margin:0 auto;
+  transform: translate(.5,-5)
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url("../photos_project1/download\ \(1\).svg") bottom center no-repeat;
+  background-size:contain;
+  content:'';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom:-30px;
+}
+
+.mole {
+  background:url("../photos_project1/download.svg") bottom center no-repeat;
+  background-size:60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top:0;
+}
