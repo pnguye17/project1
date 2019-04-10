@@ -1,18 +1,9 @@
 
-html {
-  box-sizing: border-box;
-  font-size: 10px;
-  background: aqua;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
   padding: 0;
   margin:0;
   font-family: 'Gloria Hallelujah', cursive;
+  background: aqua;
 }
 
 h1 {
@@ -25,13 +16,6 @@ h1 {
 #btn {
   text-align: center;
   padding-top: 25px;
-}
-
-.score {
-  background:rgba(255,255,255,0.2);
-  padding:0 3rem;
-  line-height:1;
-  border-radius:1rem;
 }
 
 .game {
