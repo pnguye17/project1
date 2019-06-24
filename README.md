@@ -1,6 +1,6 @@
 #Project: Whack-A-Mole
 
-Link to game:  (https://pnguye17.github.io/whackamole/)
+Link to game: https://pnguye17.github.io/whackamole/
 
 Instructions: Moles a running a-muck. Get them by hitting them on the head.
 
